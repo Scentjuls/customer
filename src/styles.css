@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+/* ==== ALL BUTTONS ====== */
+.btn:focus {
+  box-shadow: none;
+}
+
+/* ======= BREADCRUMBS ========= */
+.breadcrumb {
+  background-color: transparent;
+  font-size: 14px;
+  font-family: Avenir;
+  font-weight: 500;
+  color: #979797;
+  cursor: pointer;
+}
+
+.breadcrumb>li>a {
+  color: #777777;
+}
+
+.breadcrumb>li {
+  font-family: Avenir;
+  font-size: 14px;
+  font-weight: 500;
+  color: #253031 !important;
+  cursor: pointer;
+}
+
+/* ====== CARD ======= */
+
+.card {
+  border-radius: 4px;
+  border: solid 1px #f4f4f4;
+  background-color: #f4f4f4;
+}
+
+.card:focus {
+  outline: none;
+}
+
+.card-img {
+  height: 290px;
+}
+
+.card-footer {
+  background-color: #f4f4f4;
+  border-top: none
+}
+
+.eye-icon,
+.heart-icon {
+  border-radius: 3px;
+  border: solid 1px #b2acac;
+  background-color: #ffffff;
+  color: #b2acac;
+}
+
+.cart-icon {
+  border-radius: 3px;
+  border: solid 1px #ffffff;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.42px;
+  color: #404040;
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #777777;
+}
+
+.price {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ed3833;
+}
+
+/* ====== STAR RATINGS ========= */
+
+.favorite-color {
+  color: #b9d1ff;
+}
+
+.unfavorite-color {
+  color: #bcc4c9;
+}
+
+/* ===== MODAL ====== */
+.modal-header {
+  border-bottom: 0;
+}
+
+.close:focus {
+  outline: none;
+}
+
+/* ===== INPUT SYTLE ========== */
+label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.36px;
+  color: #91a8a4;
+}
+
+input {
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0px !important;
+}
+
+input:focus {
+  box-shadow: none !important;
+}

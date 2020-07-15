@@ -1,0 +1,227 @@
+/* ======== CATEGORY DROPDOWN ======*/
+.categories_title h2 {
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categori_toggle {
+  letter-spacing: 0.42px;
+  color: #232f3f;
+}
+
+.category-button {
+  width: 243px;
+  height: 40px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: solid 1px #e1e1e1;
+  background-color: #ffffff;
+  text-align: start;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sell-on {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.42px;
+  color: #212529;
+}
+
+.sell-on-allThingsAfrica {
+  color: #4eabf8;
+}
+
+/*========== CAROUSEL IMAGE ================= */
+.carousel-indicators li {
+  height: 12px;
+  object-fit: contain;
+}
+
+.carousel-indicators .active {
+  background-color: #ed3833 !important;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 40%;
+  left: 11%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
+}
+
+.support-process {
+  background-color: #ffffff;
+  min-height: 124px;
+  border-radius: 4px;
+  border: solid 1px #e1e1e1;
+  margin: 0 auto;
+}
+
+.category-dropdown {
+  width: 243px;
+}
+
+.see-all-categories {
+  font-weight: 600;
+  color: #ed3833 !important;
+  text-decoration: uppercase !important;
+  font-size: 0.875em !important;
+  cursor: pointer;
+}
+
+.dropdown-submenu .dropdown-menu {
+  width: 30vw;
+  margin-top: -9px !important;
+}
+
+.dropdown-menu p {
+  font-family: 'Open sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #777777;
+  margin: 0 !important;
+}
+
+.dropdown-submenu-text {
+  font-family: 'Open sans', sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: #212529;
+}
+
+.dropdown-submenu-text:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.advancing {
+  width: 584px;
+  background-color: #ffd910;
+  font-weight: bold;
+  color: #212529;
+  height: 64px;
+}
+
+.products-changing {
+  width: 514px;
+  height: 84px;
+  background-color: #ffd910;
+  color: #212529;
+}
+
+/* ======== DELIVERY PROCESS ======= */
+.delivery-process-key,
+.delivery-process-value{
+  font-family: 'Open sans', sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+/* ========= FEATURED AND BEST SELLER ========= */
+.featured-product,
+.bestsellers-product,
+.featured-brands-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.featured,
+.best-seller {
+  background-color: #ffffff;
+}
+
+.featured-text-container,
+.best-seller-text-container {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: #776871;
+  position: relative;
+}
+
+/* ====== ABOUT US ========= */
+
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #776871;
+}
+
+/* ====== BRANDS THAT TRUST US ========== */
+
+.pampers {
+  position: absolute;
+  bottom: 25%;
+}
+
+.huggies {
+  position: absolute;
+  bottom: -25%;
+}
+
+.mother-care {
+  position: absolute;
+  bottom: 41%;
+}
+
+.johnson {
+  position: absolute;
+  bottom: -33%;
+  left: 22%;
+}
+
+/* ========= MEDIA QUERIES ========= */
+@media only screen and (max-width:425px) {
+
+  .carousel-caption {
+    bottom: -12px;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .carousel-heading {
+    font-size: 18px;
+  }
+
+  .carousel-sub-heading {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+
+  .carousel-caption {
+    bottom: 0px;
+  }
+
+  .carousel-heading {
+    font-size: 40px;
+  }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+
+  .carousel-caption {
+    bottom: 0px;
+  }
+
+  .carousel-heading {
+    font-size: 45px;
+  }
+
+}
