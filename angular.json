@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Seed": {
+    "AllThingsAfricaCustomer": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Seed:build"
+            "browserTarget": "AllThingsAfricaCustomer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Seed:build:production"
+              "browserTarget": "AllThingsAfricaCustomer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Seed:build"
+            "browserTarget": "AllThingsAfricaCustomer:build"
           }
         },
         "test": {
@@ -120,15 +120,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Seed:serve"
+            "devServerTarget": "AllThingsAfricaCustomer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Seed:serve:production"
+              "devServerTarget": "AllThingsAfricaCustomer:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Seed"
+  "defaultProject": "AllThingsAfricaCustomer"
 }
