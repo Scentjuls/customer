@@ -1,0 +1,98 @@
+/* ====== PRODUCT CHECKOUT ======= */
+.payment-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #776871;
+  }
+  
+  /* ========= ORDER SUMMARY ========= */
+  .order-summary {
+    border-radius: 8px;
+    background-color: #fafafa;
+  }
+  
+  .order-summary-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #776871;
+  }
+  
+  .checkout-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #212529;
+  }
+  
+  .checkout-subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #212529;
+  }
+  
+  .checkout-total {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #000000;
+  }
+  
+  .checkout-text {
+    font-weight: 600;
+  }
+  
+  .checkout-price {
+    font-weight: bold;
+  }
+  
+  .paypal-button {
+    border-radius: 4px;
+    background-color: #ffc857;
+  }
+  
+  .debit-text {
+   font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.42px;
+    color: #ffffff;
+  }
+  
+  .debit-button {
+    border-radius: 4px;
+    background-color: #055966;
+   font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.42px;
+    color: #ffffff;
+  }
+  
+  .powered-by {
+     font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      letter-spacing: 0.36px;
+      color: #979797;
+  }
+  
+  .pay {
+      text-shadow: 1px 1px 4px rgba(64, 64, 64, 0.25);
+     font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.45px;
+      color: #404040; 
+      border-radius: 4px;
+      background-color: #b9d1ff;
+    }
+    .btn-shopNow {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.45px;
+      color: #404040;
+      border-radius: 4px;
+      background-color: #ffc857;
+    }

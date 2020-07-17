@@ -1,0 +1,123 @@
+/* ===== PRODUCT CHECKOUT ========== */
+.product-checkout-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #776871;
+}
+
+.product-title-name {
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.product-description-checkout {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #979797;
+}
+
+.sku,
+.color {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+.sku span,
+.color span {
+  font-weight: 600;
+}
+
+.price {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #404040;
+}
+
+input.increment-decrement {
+  width: 100% !important;
+  background: #f2f2f2;
+  border: none;
+  height: 40px;
+}
+
+button.increment-decrement {
+  background: #f2f2f2;
+  border: none;
+  height: 40px;
+}
+
+.remove-item,
+.add-to-wishlist {
+  font-family: Avenir;
+  font-size: 12px;
+  letter-spacing: 0.36px;
+  color: #979797;
+  text-decoration: underline;
+}
+
+
+/* ======= ORDER SUMMARY ========= */
+.order-summary {
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.order-summary-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #776871;
+}
+
+.checkout-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #212529;
+}
+
+.checkout-subheading {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.checkout-total {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+
+.checkout-text {
+  font-weight: 600;
+}
+
+.checkout-price {
+  font-weight: bold;
+}
+
+.checkout {
+  text-shadow: 1px 1px 4px rgba(64, 64, 64, 0.25);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  color: #404040;
+  border-radius: 4px;
+  background-color: #ffc857;
+}
+
+.btn-shopNow {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.45px;
+  color: #404040;
+  border-radius: 4px;
+  background-color: #ffc857;
+}
