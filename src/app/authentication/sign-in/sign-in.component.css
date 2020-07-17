@@ -1,0 +1,143 @@
+/* =========== SIGN IN MODAL =========== */
+.signin-image {
+  padding-left: 0px !important;
+  background-image: url('../../../assets/customer/Aside.svg');
+  background-size: cover;
+}
+
+.sign-in,
+.create-account-button {
+  width: 200px;
+  height: 45px;
+  border-radius: 3px;
+  border: solid 1px #f2902f;
+  background-color: #f2902f;
+  letter-spacing: 0.45px;
+  color: #ececec;
+  font-weight: 600;
+}
+
+.password,
+.fullname,
+.phonenumber,
+.code {
+  font-weight: 600;
+  letter-spacing: 0.42px;
+  color: #777777;
+}
+
+.email {
+  font-family: OpenSans;
+  font-size: 17px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  color: #777777;
+}
+
+.enter-email:active,
+.enter-password:active {
+
+  border-radius: 3px !important;
+  border: solid 1px #ed3833 !important;
+}
+
+.form-control:focus {
+  border: solid 1px #ed3833 !important;
+  box-shadow: 3px 4px 20px 0 rgba(237, 56, 51, 0.25) !important;
+}
+
+.remember-me {
+  letter-spacing: 0.42px;
+  color: #000000;
+}
+
+.create-account2 {
+  letter-spacing: 0.6px;
+  color: #2a2a2b;
+}
+
+.welcome-back-container {
+  padding: 0 6.4% 0 6.4%;
+}
+
+.welcome {
+  padding-top: 11%;
+  color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.login-text {
+  font-family: OpenSans;
+  font-size: 26px;
+}
+
+.forgot {
+  letter-spacing: 0.42px;
+  color: #777777;
+}
+
+
+.socials,
+img {
+
+  margin-left: 30px;
+
+}
+
+.form-check {
+  margin-bottom: 20px;
+}
+
+.create-account-link {
+  color: #2f80ed;
+  cursor: pointer;
+}
+
+.login-buttons {
+  display: inline-block;
+}
+
+.social-links {
+  display: inline-block;
+}
+
+.social-signin {
+  letter-spacing: 0.6px;
+  color: #777777;
+}
+
+.logo {
+  padding: 15px;
+}
+
+::placeholder {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.42px;
+  color: #212529;
+}
+
+.fa-times {
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  background-color: #ed3833;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-sm-background {
+  background-color: #232f3f;
+}
+
+.account-dropdown {
+  color: #4EABF8;
+}
