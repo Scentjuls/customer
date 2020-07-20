@@ -143,7 +143,7 @@
 
 .featured-text-container,
 .best-seller-text-container {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #776871;
   position: relative;
@@ -152,7 +152,7 @@
 /* ====== ABOUT US ========= */
 
 .about-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 2;
   color: #776871;

@@ -15,7 +15,8 @@ import { CongratulationsComponent } from './congratulations/congratulations.comp
 
 
 @NgModule({
-  declarations: [MainComponent, LandingComponent, ProductViewComponent, ProductCheckoutComponent, CheckoutPageComponent, PaymentComponent, OrdersComponent, CongratulationsComponent],
+  declarations: [MainComponent, LandingComponent, ProductViewComponent, ProductCheckoutComponent, CheckoutPageComponent,
+     PaymentComponent, OrdersComponent, CongratulationsComponent],
   imports: [
     CommonModule,
     MainRoutingModule,

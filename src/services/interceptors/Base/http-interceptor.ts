@@ -19,26 +19,24 @@ import { NotificationsService } from 'src/services/classes/notifications/notific
             // custom api errors
             if (evt instanceof HttpResponse) {
               this.loaderService.hide()
-              if (evt.body.code != 1 && !evt.body.token_type) {
-                this.errorMessage = evt.body.errors[0] || evt.body.payload[0];
+              if (evt.body.error == true) {
+                this.errorMessage = evt.body.message ;
                 this.notification.publishMessages(this.errorMessage, 'danger', 1)
               }
+              console.log(evt);
             }
           }),
 
           catchError((error: HttpErrorResponse) => {
             this.loaderService.hide();
-            if (error.status === 401) {
-              this.notification.publishMessages('Your Token has expired. Please Login', 'danger', 1)
-              this.router.navigateByUrl("/");              
-            }
-    
+            console.log(error);
+
             if (error.error instanceof ErrorEvent) {
               //client-side error
               this.errorMessage = `Error: ${error.error.message}`;
             } else {
               // server-side error
-            
+             
               switch (error.status) {
                 case 503: {
                   this.errorMessage = 'An Internal Error Occured. Our Engineers Have Been Contacted';
@@ -64,6 +62,11 @@ import { NotificationsService } from 'src/services/classes/notifications/notific
                     this.notification.publishMessages(this.errorMessage, 'danger', 1)
                   break;
                 }
+                case 401: {
+                  this.notification.publishMessages(error.error.message, 'danger', 1)
+                  this.router.navigate(["/"]);              
+                  break;
+                }
                 case 405: {
                   this.errorMessage = 'An Error Occured While Processing Your Request. Please Try Again';
                     this.notification.publishMessages(this.errorMessage, 'danger', 1)
@@ -77,9 +80,7 @@ import { NotificationsService } from 'src/services/classes/notifications/notific
               }
             }
     
-            if (error.status === 503 || error.status === 0) {
-              return throwError(this.errorMessage);
-            }
+            return throwError(error.error);
           })
         );
       }

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiBaseURL: 'http://omprevamp.nigeriasbsc.com/api/v1/',
   productLogoLarge: ''
 };
 
