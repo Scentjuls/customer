@@ -25,24 +25,15 @@
           <div class="row">
             <div class="col-lg-2 order-lg-first">
               <div class="row">
-                <div class="col-lg-12 col-3">
-                  <img src="assets/customer/Rectangle 12.svg" alt="" class="front  mb-5">
-                </div>
-                <div class="col-lg-12 col-3">
-                  <img src="assets/customer/Rectangle 12.1.svg" alt="" class="front mb-5">
-                </div>
-                <div class="col-lg-12 col-3">
-                  <img src="assets/customer/Rectangle 12.2.svg" alt="" class="front  mb-5">
-                </div>
-                <div class="col-lg-12 col-3">
-                  <img src="assets/customer/Rectangle 12.4.svg" alt="" class="front mb-5">
+                <div *ngFor="let image of productDetail.image" class="col-lg-12 col-3">
+                  <img src="{{image}}" (click)="setMain(image)"  alt="small images" class="front  mb-5">
                 </div>
               </div>
   
             </div>
   
             <div class="col-lg-6 order-lg-second order-first mb-5">
-              <img src="assets/customer/Rectangle 13.svg" alt="" class="img-fluid w-100">
+              <img src="{{mainImage}}" alt="big image" class="img-fluid w-100">
             </div>
   
             <div class="col-lg-4">
@@ -61,9 +52,9 @@
                     </span>
                   </p>
                   <p class="sku">SKU: <span>{{productDetail.sku}}</span> </p>
-                  <p *ngIf="productDetail.color">Color: </p>
+                  <span *ngIf="productDetail.color">Color: </span>
                   <span *ngFor="let colorValue of productDetail.color; let i = index" >
-                    <input type="radio" id="color" (change)="chooseColor()">
+                    <input type="radio" id="color" (change)="chooseColor()" >
                     <label for="color">{{colorValue | uppercase }}</label>
                   </span>
                   <p class="merchant-name">Merchant: <b>Olaniyi Ajibola</b></p>
@@ -202,7 +193,7 @@
                             <span class="material"> Style: </span>
                           </div>
                           <div class="col-6 mb-3 p-0">
-                            <span class="content ml-"> Long Sleeves</span>
+                            <span class="content ml-"> {{productDetail.style}}</span>
                           </div>
   
                           <div class="col-6 mb-3 p-0">
@@ -226,7 +217,7 @@
                             <span class="material"> Selling Unit: </span>
                           </div>
                           <div class="col-6 mb-3">
-                            <span class="content ml-4">Single Item</span>
+                            <span class="content ml-4">{{productDetail.selling_unit}}</span>
                           </div>
   
                           <div class="col-6 mb-3">
@@ -240,7 +231,7 @@
                             <span class="material">Single Gross Weight:</span>
                           </div>
                           <div class="col-6 mb-3">
-                            <span class="content ml-4">1.6 kg</span>
+                            <span class="content ml-4">{{productDetail.weight}}</span>
                           </div>
   
                           <div class="col-6 mb-3">
@@ -254,7 +245,7 @@
                             <span class="material"> Estimated Time: </span>
                           </div>
                           <div class="col-6 mb-3">
-                            <span class="content ml-4">7 - 15 days</span>
+                            <span class="content ml-4">{{productDetail.estimated_time}}</span>
                           </div>
   
                         </div>
@@ -592,7 +583,7 @@
                   <span class="material"> Style: </span>
                 </div>
                 <div class="col-6 mb-3 text-right">
-                  <span class="content"> Long Sleeves</span>
+                  <span class="content"> {{productDetail.style}}</span>
                 </div>
   
                 <div class="col-6 mb-3">
@@ -611,21 +602,21 @@
                   <span class="material"> Selling Unit: </span>
                 </div>
                 <div class="col-6 mb-3 text-right">
-                  <span class="content">Single Item</span>
+                  <span class="content">{{productDetail.selling_unit}}</span>
                 </div>
   
                 <div class="col-6 mb-3">
                   <span class="material"> Single Package Size: </span>
                 </div>
                 <div class="col-6 mb-3 text-right">
-                  <span class="content">50x30x3 cm</span>
+                  <span class="content">{{productDetail.single_package_size}}</span>
                 </div>
   
                 <div class="col-6 mb-3">
                   <span class="material">Single Gross Weight:</span>
                 </div>
                 <div class="col-6 mb-3 text-right">
-                  <span class="content">1.6 kg</span>
+                  <span class="content">{{productDetail.weight}}</span>
                 </div>
   
                 <div class="col-6 mb-3">
@@ -639,7 +630,7 @@
                   <span class="material"> Estimated Time: </span>
                 </div>
                 <div class="col-6 mb-3 text-right">
-                  <span class="content">7 - 15 days</span>
+                  <span class="content">{{productDetail.estimated_time}}</span>
                 </div>
               </div>
             </div>
@@ -700,7 +691,7 @@
                   <span class="material"> Single Package Size: </span>
                 </div>
                 <div class="col-6 mb-3 text-right">
-                  <span class="content"> 50x30x3 cm</span>
+                  <span class="content"> {{productDetail.single_package_size}}</span>
                 </div>
   
                 <div class="col-6 mb-3">
@@ -898,4 +889,4 @@
     <!-- ENDING OF NAV TABS -->
   </div>
 </div>
-<app-related-products></app-related-products>
+<app-related-products  [products]="relatedProducts" (refreshPage)="relatedProductView()"></app-related-products>
