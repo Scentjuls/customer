@@ -1,3 +1,8 @@
+.merchant-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
 /* ========== BUTTONS ============ */
 .buy-now {
   width: 140px;

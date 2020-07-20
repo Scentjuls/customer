@@ -158,19 +158,23 @@
           <h3 class="featured-product mt-4 mb-3">Featured Products</h3>
         </div>
 
-        <div class="col-lg-3 col-md-6 col-sm-12 pl-0">
+        <div *ngFor="let featuredProduct of featuredProducts" class="col-lg-3 col-md-6 col-sm-12 pl-0">
           <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07/image 1.jpg" class="card-img" alt="product image">
+            <img (click)="viewProduct(featuredProduct)" src="{{featuredProduct.image[0]}}" class="card-img" alt="product image">
             <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
+              <h5 class="product-title">{{featuredProduct.product_name | slice:0:24 }}
+                <span *ngIf="featuredProduct.product_name.length > 24">...</span>
+              </h5>
+              <p class="description">{{featuredProduct.product_description | slice:0:33}}
+                <span *ngIf="featuredProduct.product_description.length> 33">...</span>
+              </p>
+              <p class="price">{{featuredProduct.new_price | currency: "₦"}}</p>
               <!-- <app-star-rating [rating]=4></app-star-rating> -->
             </div>
             <div class="card-footer">
               <div class="row">
                 <div class="col-2 pr-0">
-                  <button routerLink="/product-view" class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
+                  <button (click)="viewProduct(featuredProduct)" class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
                 </div>
                 <div class="col-8">
                   <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
@@ -182,82 +186,6 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07 (1)/image 1.jpg" class="card-img" alt="product image">
-            <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
-              <!-- <app-star-rating [rating]=4></app-star-rating> -->
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
-                </div>
-                <div class="col-8">
-                  <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
-                </div>
-                <div class="col-2 pl-0">
-                  <button class="btn heart-icon w-100 h-100"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07 (2)/image 1.jpg" class="card-img" alt="product image">
-            <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
-              <!-- <app-star-rating [rating]=4></app-star-rating> -->
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
-                </div>
-                <div class="col-8">
-                  <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
-                </div>
-                <div class="col-2 pl-0">
-                  <button class="btn heart-icon w-100 h-100"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-12 pr-0">
-          <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07 (2)/image 1.jpg" class="card-img" alt="product image">
-            <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
-              <!-- <app-star-rating [rating]=4></app-star-rating> -->
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
-                </div>
-                <div class="col-8">
-                  <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
-                </div>
-                <div class="col-2 pl-0">
-                  <button class="btn heart-icon w-100 h-100"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -301,94 +229,19 @@
           <h3 class="bestsellers-product mt-4 mb-3">Best Sellers</h3>
         </div>
 
-        <div class="col-lg-3 col-md-6 col-sm-12 pl-0">
+        <div *ngFor="let bestSellerProduct of bestSellerProducts" class="col-lg-3 col-md-6 col-sm-12 pl-0">
           <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07/image 1.jpg" class="card-img" alt="product image">
+            <img (click)="viewProduct(bestSellerProduct)" src="{{bestSellerProduct.image[0]}}" class="card-img" alt="product image">
             <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
+              <h5 class="product-title">{{bestSellerProduct.product_name}}</h5>
+              <p class="description">{{bestSellerProduct.product_description }}</p>
+              <p class="price">{{bestSellerProduct.new_price | currency: "₦"}}</p>
               <!-- <app-star-rating [rating]=4></app-star-rating> -->
             </div>
             <div class="card-footer">
               <div class="row">
                 <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
-                </div>
-                <div class="col-8">
-                  <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
-                </div>
-                <div class="col-2 pl-0">
-                  <button class="btn heart-icon w-100 h-100"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07 (1)/image 1.jpg" class="card-img" alt="product image">
-            <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
-              <!-- <app-star-rating [rating]=4></app-star-rating> -->
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
-                </div>
-                <div class="col-8">
-                  <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
-                </div>
-                <div class="col-2 pl-0">
-                  <button class="btn heart-icon w-100 h-100"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07 (2)/image 1.jpg" class="card-img" alt="product image">
-            <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
-              <!-- <app-star-rating [rating]=4></app-star-rating> -->
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
-                </div>
-                <div class="col-8">
-                  <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
-                </div>
-                <div class="col-2 pl-0">
-                  <button class="btn heart-icon w-100 h-100"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 col-sm-12 pr-0">
-          <div class="card mb-4">
-            <img src="assets/customer/image 1_2020-05-07 (2)/image 1.jpg" class="card-img" alt="product image">
-            <div class="card-body text-center">
-              <h5 class="product-title">Carlson Baby Pushchair</h5>
-              <p class="description">Beautifully crafted with Synthetic leather </p>
-              <p class="price">£500.00</p>
-              <!-- <app-star-rating [rating]=4></app-star-rating> -->
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-2 pr-0">
-                  <button class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
+                  <button (click)="viewProduct(bestSellerProduct)" class="btn eye-icon w-100 h-100"><i class="far fa-eye"></i></button>
                 </div>
                 <div class="col-8">
                   <button class="btn cart-icon w-100 py-3"><i class="fas fa-shopping-cart"></i>Add To Cart</button>
