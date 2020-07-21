@@ -1,1 +1,70 @@
-<p>create-account works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 create-account-image"></div>
+    <div class="col-lg-6 welcome-back-container">
+      <div class="modal-header">
+        <button id="closeCreateAccount" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <p class="welcome mt-5">Welcome!</p>
+      <p class="create-account-text mb-5">Create a personal account by filling the form below</p>
+
+      <form ngNativeValidate #createAccountForm="ngForm" (submit)="createAccount(createAccountForm)">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-6">
+                <label for="firstName" class="firstName">Firstname</label>
+                <input type="text" id="firstName" class="form-control" ngModel name="firstName" required>
+                <label *ngIf="createAccountForm.invalid && createAccountForm.controls['firstName'] && createAccountForm.controls['firstName'].invalid && 
+                createAccountForm.controls['firstName'].touched" class="text-danger"> <small> Please enter your Firstname </small></label>
+              </div>
+              <div class="col-6">
+                <label for="lastName" class="lastName">Lastname</label>
+                <input type="text" id="lastName" class="form-control" ngModel name="lastName" required>
+                <label *ngIf="createAccountForm.invalid && createAccountForm.controls['lastName'] && createAccountForm.controls['lastName'].invalid && 
+                createAccountForm.controls['lastName'].touched" class="text-danger"> <small> Please enter your Lastname </small></label>
+              </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="email">Email Address</label>
+          <input type="email" id="email" class="form-control cog" pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" ngModel name="email" required>
+          <label *ngIf="createAccountForm.invalid && createAccountForm.controls['email'] && createAccountForm.controls['email'].invalid && 
+          createAccountForm.controls['email'].touched" class="text-danger"> <small> Please enter a valid email address </small></label> 
+        </div>
+
+        <div class="form-group">
+          <label for="phonenumber" class="phonenumber">Phone Number</label>
+          <input type="tel" id="phonenumber" class="form-control cog" ngModel name="phoneNumber" required>
+          <label *ngIf="createAccountForm.invalid && createAccountForm.controls['phoneNumber'] && createAccountForm.controls['phoneNumber'].invalid 
+          && createAccountForm.controls['phoneNumber'].touched" class="text-danger"> <small> Please enter a valid phone number </small></label>  
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword" class="password">Password</label>
+          <input type="password" class="form-control enter-password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+           ngModel name="password" required>
+           <label *ngIf="createAccountForm.controls['password'] && !createAccountForm.controls['password'].touched" for="password" class="password text-info">
+               Your Password must be minimum of 8 characters,1 Uppercase letter, 1 Lowercase letter, and 1 Number Or Special Character</label>
+           <label *ngIf="createAccountForm.invalid && createAccountForm.controls['password'] && createAccountForm.controls['password'].invalid && 
+           createAccountForm.controls['password'].touched" class="text-danger"> <small> Please enter a valid password </small></label>    
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputConfirmPassword" class="password">ConfirmPassword</label>
+          <input type="password" class="form-control enter-password" ngModel name="confirmPassword">
+        </div>
+
+        <div class="login-buttons mb-4 mt-5">
+          <button class="btn cancel mr-2 px-4">Cancel</button>
+          <button type="submit" class="btn create-account-button">CreateAccount</button>
+        </div>
+      </form>
+      <p class="create-account2">Already have an account? <span data-toggle="modal" data-target=".bd-example-modal-xl"
+          class="create-account-link ">Sign In Here</span></p>
+
+    </div>
+  </div>
+</div>

@@ -54,10 +54,10 @@
                   <p class="sku">SKU: <span>{{productDetail.sku}}</span> </p>
                   <span *ngIf="productDetail.color">Color: </span>
                   <span *ngFor="let colorValue of productDetail.color; let i = index" >
-                    <input type="radio" id="color" (change)="chooseColor()" >
+                    <input type="radio" id="color"  >
                     <label for="color">{{colorValue | uppercase }}</label>
                   </span>
-                  <p class="merchant-name">Merchant: <b>Olaniyi Ajibola</b></p>
+                  <!-- <p class="merchant-name">Merchant: <b>{{productDetail.user.firstname}} {{productDetail.user.lastname}}</b></p> -->
                 </div>
                 <div class="col-12 mt-4">
                   <div class="border-top pt-4">

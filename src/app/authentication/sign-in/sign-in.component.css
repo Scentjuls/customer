@@ -1,20 +1,32 @@
 /* =========== SIGN IN MODAL =========== */
+.modal-header .close {
+  margin: -1rem -4rem -1rem auto;
+}
+
 .signin-image {
   padding-left: 0px !important;
   background-image: url('../../../assets/customer/Aside.svg');
   background-size: cover;
 }
 
-.sign-in,
-.create-account-button {
-  width: 200px;
-  height: 45px;
+.sign-in {
   border-radius: 3px;
   border: solid 1px #f2902f;
   background-color: #f2902f;
   letter-spacing: 0.45px;
   color: #ececec;
   font-weight: 600;
+}
+
+.cancel {
+  border-radius: 3px;
+  border: solid 1px #ececec;
+  background-color: #ececec;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.45px;
+  color: #212529;
 }
 
 .password,
@@ -27,7 +39,7 @@
 }
 
 .email {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   font-weight: 600;
   font-stretch: normal;
@@ -72,7 +84,7 @@
 }
 
 .login-text {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 26px;
 }
 
@@ -84,9 +96,7 @@
 
 .socials,
 img {
-
   margin-left: 30px;
-
 }
 
 .form-check {
@@ -140,4 +150,12 @@ img {
 
 .account-dropdown {
   color: #4EABF8;
+}
+
+.forgot-password {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  color: #979797;
+  cursor: pointer;
 }

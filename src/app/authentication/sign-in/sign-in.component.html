@@ -2,23 +2,39 @@
   <div class="row">
     <div class="col-lg-6 signin-image"></div>
     <div class="col-lg-6 welcome-back-container">
+      <div class="modal-header">
+        <button id="closeSignIn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <p class="welcome mt-4 bold">Welcome Back!</p>
       <p class="login-text mb-3">Login using your email address or username</p>
 
-      <form>
+      <form ngNativeValidate #signInForm="ngForm" (submit)="signIn(signInForm)">
         <div class="form-group">
           <label class="mt-5 email">Email or Username</label>
-          <input type="email" placeholder="olawalemartins@gmail.com" class="form-control  enter-email ">
+          <input type="email" class="form-control  enter-email" ngModel name="email" required>
         </div>
         <div class="form-group">
           <label class="password">Password</label>
-          <input type="password" placeholder="Password is required" name="password"
-            class="form-control enter-password ">
+          <input type="password" class="form-control enter-password" ngModel name="password" required>
         </div>
-
+        <div class="row justify-content-between">
+          <div class="col-6">
+            <div class="form-check mb-2 mr-sm-2">
+                <input class="form-check-input" type="checkbox" ngModel name="remember" id="inlineFormCheck">
+                <label class="form-check-label remember-me" for="inlineFormCheck">
+                  Remember me
+                </label>
+              </div>
+          </div>
+          <div class="col-6">
+              <p class="forgot-password text-right">Forgot Password?</p>
+          </div>
+      </div>
         <div class="login-buttons d-flex mb-5 mt-5">
           <button type="button" class="btn cancel px-4 mr-2">Cancel</button>
-          <button type="submit" class="btn create-account-button">Sign In</button>
+          <button type="submit" class="btn sign-in">Sign In</button>
         </div>
       </form>
       <p class="create-account2 ff fs-12">Don’t have an account? <span class="create-account-link ff fs-12">Create

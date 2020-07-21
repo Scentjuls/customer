@@ -113,14 +113,6 @@ label {
   color: #91a8a4;
 }
 
-input {
-  background-color: transparent !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-radius: 0px !important;
-}
-
 input:focus {
   box-shadow: none !important;
 }
