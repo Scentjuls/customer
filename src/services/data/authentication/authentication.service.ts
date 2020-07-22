@@ -29,4 +29,9 @@ export class AuthenticationService {
     }
     return this.http.post<any>(this.baseUrl + 'auth/login', data)
   }
+
+  logOut() {
+    sessionStorage.removeItem('user_details');
+    localStorage.removeItem('user_details');
+  }
 }

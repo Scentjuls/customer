@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthenticationService } from 'src/services/data/authentication/authentication.service';
 import { NotificationsService } from 'src/services/classes/notifications/notifications.service';
@@ -9,7 +9,9 @@ import { NotificationsService } from 'src/services/classes/notifications/notific
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
+  isLoggedIn: boolean = false;
 
+  @Output() actionLoginStatus = new EventEmitter<any>();
   constructor(
     private authData: AuthenticationService,
     private notify: NotificationsService
@@ -18,11 +20,14 @@ export class SignInComponent implements OnInit {
   ngOnInit() {
   }
 
+  actionLogin() {
+    this.actionLoginStatus.emit();
+  }
+
   signIn(form: NgForm) {
     this.authData.signInForm(form.value).subscribe(
       res => {
         if (res.data === null) {
-          console.log(res.data)
           this.notify.publishMessages(res.message, 'warning', 1)
         } else {
           if (form.value.remember == true) {
@@ -32,6 +37,7 @@ export class SignInComponent implements OnInit {
           }
           form.reset();
           this.notify.publishMessages('Successfully Logged In', 'success', 1);
+          this.actionLogin()
           document.getElementById('closeSignIn').click();
         }
 
