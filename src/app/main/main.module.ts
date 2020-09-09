@@ -12,6 +12,7 @@ import { CheckoutPageComponent } from './product-checkout/checkout-page/checkout
 import { PaymentComponent } from './product-checkout/payment/payment.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CongratulationsComponent } from './congratulations/congratulations.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CongratulationsComponent } from './congratulations/congratulations.comp
     CommonModule,
     MainRoutingModule,
     SharedModule,
-    AuthenticationModule
+    AuthenticationModule,
+    FormsModule
   ]
 })
 export class MainModule { }

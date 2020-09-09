@@ -37,7 +37,7 @@
             </div>
   
             <div class="col-lg-4">
-              <form class="row">
+              <form ngNativeValidate #productView="ngForm" class="row">
                 <div class="col-12 mb-5">
                   <p class="item-name mb-0">{{productDetail.product_name}}</p>
                   <small class="small-text">
@@ -54,7 +54,7 @@
                   <p class="sku">SKU: <span>{{productDetail.sku}}</span> </p>
                   <span *ngIf="productDetail.color">Color: </span>
                   <span *ngFor="let colorValue of productDetail.color; let i = index" >
-                    <input type="radio" id="color"  >
+                    <input type="radio" id="color" [(ngModel)]="color" name="color" [value]=colorValue [checked]="true" required>
                     <label for="color">{{colorValue | uppercase }}</label>
                   </span>
                   <!-- <p class="merchant-name">Merchant: <b>{{productDetail.user.firstname}} {{productDetail.user.lastname}}</b></p> -->
@@ -70,13 +70,13 @@
                         <div class="row">
                           <div class="col-lg-1"></div>
                           <div class="col-lg-3 col-sm-4 col-4 pr-0">
-                            <button class="no border-right w-100">-</button>
+                            <button (click)="itemQuantity = itemQuantity - 1; fixQuatity()" class="no border-right w-100">-</button>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-4 px-0">
-                            <input type="text" class="text-center no w-100" min="1" value="2">
+                            <input (change)="fixQuatity()" type="text" class="text-center no w-100" min="1" [(ngModel)]="itemQuantity" name="itemQuantity">
                           </div>
                           <div class="col-lg-3 col-sm-4 col-4 pl-0">
-                            <button class="no border-left w-100">+</button>
+                            <button (click)="itemQuantity = itemQuantity + 1; fixQuatity()" class="no border-left w-100">+</button>
                           </div>
                         </div>
                       </div>
@@ -90,7 +90,7 @@
                         <button class="w-100 heart-icon"><i class="fa fa-heart" aria-hidden="true"></i></button>
                       </div>
                       <div class="col-lg-5 col-4 pl-lg-0">
-                        <button routerLink="/product-checkout" class="w-100 fs-15 buy-now">Buy Now</button>
+                        <button (click)="buyNow(productDetail)" class="w-100 fs-15 buy-now">Buy Now</button>
                       </div>
                     </div>
                   </div>

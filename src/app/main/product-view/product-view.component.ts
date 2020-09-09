@@ -11,6 +11,7 @@ export class ProductViewComponent implements OnInit {
   mainImage: string; 
   relatedProducts: Array<any> = [];
   related: boolean = true;
+  itemQuantity: number = 1;
 
   constructor(
     private productDetailsData: ProductsService
@@ -22,7 +23,6 @@ export class ProductViewComponent implements OnInit {
   }
 
   getProductDetails(id: any) {
-    // this.related;
     this.productDetailsData.getProductDetailsHome(id).subscribe(
       res => {
         this.productDetail = res.data.product;
@@ -44,6 +44,12 @@ export class ProductViewComponent implements OnInit {
   relatedProductView() {
     this.ngOnInit();
     window.scrollTo(0, 0);
+  }
+
+  fixQuantity() {
+    if(this.itemQuantity <= 0) {
+      this.itemQuantity = 1;
+    }
   }
 
 }
